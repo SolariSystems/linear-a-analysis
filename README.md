@@ -4,7 +4,7 @@ Computational structural analysis of the Minoan Linear A script (~1850-1450 BCE)
 
 ## What This Is
 
-Linear A is one of the last major undeciphered writing systems. These scripts analyze the ~1,427 known inscriptions using computational methods to:
+Linear A is one of the last major undeciphered writing systems. These scripts analyze ~1,720 known inscriptions using computational methods to:
 
 - Test proposed grammatical rules against the libation formula corpus (41 variants)
 - Measure information-theoretic properties (Shannon entropy, bigram predictability)
@@ -22,6 +22,9 @@ Linear A is one of the last major undeciphered writing systems. These scripts an
 - Hurro-Urartian shows strongest overall fit at **77.5%** across 8 dimensions, with a **37-point gap** over the next candidate (Semitic at 40.3%). This is a composite score — see Calibration & Limitations below for what it does and doesn't mean.
 - **Linear B negative control validates methodology**: Mycenaean Greek scores 30.8% — a known IE language is correctly identified as dissimilar to Linear A
 - **Bootstrap confidence**: P(Hurro-Urartian = #1) = 100.0% across 10,000 resampled iterations. Note: with 7 candidates and 8 correlated dimensions, this is expected for any clear leader — it confirms consistency, not certainty.
+- **Corpus-wide analysis**: 1,720 inscriptions processed — 31.8% of all words identified with ~25 vocabulary items, 5 administrative document types classified, arithmetic totals verified on multiple tablets
+- **-RO nominalizer rule confirmed**: KU-RO (total), KI-RO (deficit), SA-RO (liquid-allocation) — productive suffix turning roots into abstract nouns
+- **Balance-sheet accounting identified**: SA-RA₂ (allocation) sections followed by KI-RO (deficit) sections on same tablets, with deficit amounts consistently less than allocations — tracking commitments vs. deliveries
 
 ## Visualizations
 
@@ -46,7 +49,8 @@ The control validation script generates 5 publication-quality figures:
 
 | Script | Description |
 |--------|-------------|
-| `LINEAR_A_SUBSTRATE_PREDICTIONS.py` | **NEW** — Beekes pre-Greek substrate test: 10 prediction entries, three-way phonological convergence (substrate × Linear A × Hurrian), semantic domain overlap analysis, triangulation methodology |
+| `LINEAR_A_CORPUS_ANALYSIS.py` | **NEW** — Full corpus statistical analysis: 1,720 inscriptions, word frequency tables, commodity co-occurrence, 5 document types identified, -RO nominalizer grammar rule, 31.8% corpus readability, arithmetic-verified tablet readings |
+| `LINEAR_A_SUBSTRATE_PREDICTIONS.py` | Beekes pre-Greek substrate test: 10 prediction entries, three-way phonological convergence (substrate × Linear A × Hurrian), semantic domain overlap analysis, triangulation methodology |
 | `LINEAR_A_CONTROL_VALIDATION.py` | Linear B negative control, expanded 38-item vocabulary, 5 visualizations, source documentation, honest assessment |
 | `LINEAR_A_STRUCTURAL_ANALYSIS.py` | Core analysis: libation formula corpus, morphological rule testing, information theory, sign frequency, co-occurrence networks |
 | `LINEAR_A_PHONOLOGICAL_ANALYSIS.py` | Sound system analysis: phonotactics, vowel harmony, consonant clusters, syllable structure, rhythm patterns |
