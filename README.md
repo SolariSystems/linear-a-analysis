@@ -11,6 +11,7 @@ Linear A is one of the last major undeciphered writing systems. These scripts an
 - Compare the Minoan sound system against candidate language families
 - Apply statistical controls (permutation testing, ablation, perturbation analysis)
 - Evaluate cross-domain convergence across linguistic, archaeological, and genetic evidence
+- **Validate methodology using Linear B (Mycenaean Greek) as a negative control**
 
 ## Key Findings
 
@@ -18,12 +19,34 @@ Linear A is one of the last major undeciphered writing systems. These scripts an
 - **Shannon entropy of 4.70 bits/sign** — squarely in the natural language range
 - **9/9 administrative structural features** match other Bronze Age accounting systems
 - **Vowel distribution** (a=43%, i=21%, u=18%, e=14%, o=4%) matches Beekes' reconstructed pre-Greek three-vowel system
-- Hurro-Urartian shows strongest overall fit at 77.7% across 14 dimensions, with a 37-point gap over the next candidate (Semitic at 40.1%)
+- Hurro-Urartian shows strongest overall fit at **77.5%** across 8 dimensions, with a **37-point gap** over the next candidate (Semitic at 40.3%)
+- **Linear B negative control validates methodology**: Mycenaean Greek scores 30.8% — a known IE language is correctly identified as dissimilar to Linear A
+- **Bootstrap confidence**: P(Hurro-Urartian = #1) = 100.0% across 10,000 resampled iterations
+
+## Visualizations
+
+The control validation script generates 5 publication-quality figures:
+
+### Scoring Heatmap
+![Scoring Heatmap](figures/fig_scoring_heatmap.png)
+
+### Multi-Dimensional Radar Chart
+![Radar Chart](figures/fig_radar_chart.png)
+
+### Bootstrap Score Distributions
+![Bootstrap Distribution](figures/fig_bootstrap_distribution.png)
+
+### Language Family Similarity Space (MDS)
+![Similarity MDS](figures/fig_similarity_mds.png)
+
+### Bronze Age Mediterranean Geographic Map
+![Geographic Map](figures/fig_geographic_map.png)
 
 ## Scripts
 
 | Script | Description |
 |--------|-------------|
+| `LINEAR_A_CONTROL_VALIDATION.py` | **NEW** — Linear B negative control, expanded 38-item vocabulary, 5 visualizations, source documentation, honest assessment |
 | `LINEAR_A_STRUCTURAL_ANALYSIS.py` | Core analysis: libation formula corpus, morphological rule testing, information theory, sign frequency, co-occurrence networks |
 | `LINEAR_A_PHONOLOGICAL_ANALYSIS.py` | Sound system analysis: phonotactics, vowel harmony, consonant clusters, syllable structure, rhythm patterns |
 | `LINEAR_A_HURRIAN_COMPARISON.py` | Systematic Hurrian grammar comparison: case system mapping, vocabulary, verbal morphology |
@@ -34,13 +57,17 @@ Linear A is one of the last major undeciphered writing systems. These scripts an
 
 ## Running
 
-All scripts use only the Python 3 standard library. No external dependencies.
+The core analysis scripts use only the Python 3 standard library. The control validation script requires `matplotlib` and `numpy` for visualizations.
 
 ```bash
+# Core analysis (no dependencies)
 python3 LINEAR_A_STRUCTURAL_ANALYSIS.py
 python3 LINEAR_A_STATISTICAL_CONTROLS.py
 python3 LINEAR_A_CROSS_DOMAIN_CONVERGENCE.py
-# etc.
+
+# Control validation with visualizations (requires matplotlib, numpy)
+pip install matplotlib numpy
+python3 LINEAR_A_CONTROL_VALIDATION.py
 ```
 
 ## Methodology
@@ -53,16 +80,36 @@ The approach treats Linear A as a systems analysis problem rather than a purely 
 2. **Administrative pattern matching** — Cross-cultural comparison with Sumerian, Egyptian, and Linear B accounting systems
 3. **Statistical controls** — Every proposed pattern is tested against null hypotheses and competing language families
 4. **Cross-domain convergence** — Independent evidence streams (DNA, trade networks, material culture) evaluated via Bayesian updating
+5. **Negative control validation** — Linear B (deciphered Mycenaean Greek) run through the same pipeline to verify methodology doesn't produce false positives
+
+### The Circular Reasoning Problem (acknowledged)
+
+Using Linear B phonetic values to read Linear A introduces a Greek phonological filter. Our strongest evidence comes from morphological and structural patterns (agglutination, case agreement, word order) which are less affected by specific phonetic value assignments than vocabulary comparisons.
 
 ## Data Sources
 
-- SigLA Database (Salgarella & Castellan, 2020)
-- GORILA Corpus (Godart & Olivier, 1976-1985)
-- Younger, J.G. — Linear A Texts in Phonetic Transcription
-- Davis, B. (Melbourne) — Statistical/phonotactic analysis
-- Corazza, Montecchi, Valerio, Tamburini (Bologna, 2020) — Fraction sign values
-- Van Soesbergen, P.G. (2017) — Hurrian hypothesis
-- Beekes, R.S.P. (2014) — Pre-Greek substrate reconstruction
+### Primary Corpus
+- **SigLA Database** (Salgarella & Castellan, 2020) — ~3,000 signs from ~400 inscriptions
+- **GORILA Corpus** (Godart & Olivier, 1976-1985) — 5 volumes, ~1,427 inscriptions, ~7,362 sign tokens
+- **Younger, J.G.** — Linear A Texts in Phonetic Transcription (University of Kansas)
+
+### Reference Grammars
+- Wegner (2007) & Wilhelm (1989) — Hurrian
+- Salvini (2008) & Diakonoff (1971) — Urartian
+- Hoffner & Melchert (2008) — Hittite
+- Huehnergard (2011) — Akkadian
+- Allen (2014) — Egyptian
+- Rix (2004) & Bonfante (2002) — Etruscan
+- Hewitt (1995) — Kartvelian
+- Ventris & Chadwick (1956, 1973) — Mycenaean Greek
+
+### Pre-Greek Substrate
+- Beekes (2010) "Etymological Dictionary of Greek" — 700+ non-IE words identified
+- Beekes (2014) "Pre-Greek: Phonology, Morphology, Lexicon"
+
+### Vocabulary Comparison
+- **38 items** across 7 language families (6 competing + 1 control)
+- Categories: established Linear A words, morphological suffixes, pre-Greek substrate, administrative terms, libation formula elements
 
 ## License
 
