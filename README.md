@@ -60,6 +60,8 @@ The control validation script generates 5 publication-quality figures:
 | `LINEAR_A_STATISTICAL_CONTROLS.py` | Reviewer-proof controls: baseline distributions across 6 language families, ablation, permutation testing, sign-reading perturbation |
 | `LINEAR_A_CROSS_DOMAIN_CONVERGENCE.py` | Bayesian convergence across 8 independent evidence domains (linguistic, archaeogenetic, maritime trade, material culture, religious iconography, etc.) |
 | `LINEAR_A_TRANSLATION_ATTEMPT.md` | Full writeup: established facts, analysis results, proposed translations, confidence levels, honest assessment of unknowns |
+| `LINEAR_A_SYNTHESIS_REPORT.md` | Comprehensive synthesis: 30+ vocabulary items, 5 document types, 8 grammar rules, religious formula structure, corpus statistics, honest limitations |
+| `PROCESS_DOCUMENTATION.md` | How this analysis was produced: 5-stage pipeline, knowledge base construction, cross-cultural methodology, reproducibility notes |
 
 ## Running
 
