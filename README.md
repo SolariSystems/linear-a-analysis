@@ -49,7 +49,8 @@ The control validation script generates 5 publication-quality figures:
 
 | Script | Description |
 |--------|-------------|
-| `LINEAR_A_CORPUS_ANALYSIS.py` | **NEW** — Full corpus statistical analysis: 1,720 inscriptions, word frequency tables, commodity co-occurrence, 5 document types identified, -RO nominalizer grammar rule, 31.8% corpus readability, arithmetic-verified tablet readings |
+| `LINEAR_A_CROSS_CULTURAL_STRUCTURE.py` | **NEW** — Cross-cultural structural analysis using 3,000+ ancient texts across 6 civilizations (Sumerian, Egyptian, Hittite, Hebrew, Greek, Vedic). Universal libation formula invariants, evolution timeline 3000-500 BCE, structural parse of the libation formula, offering-term frequency validation |
+| `LINEAR_A_CORPUS_ANALYSIS.py` | Full corpus statistical analysis: 1,720 inscriptions, word frequency tables, commodity co-occurrence, 5 document types identified, -RO nominalizer grammar rule, 31.8% corpus readability, arithmetic-verified tablet readings |
 | `LINEAR_A_SUBSTRATE_PREDICTIONS.py` | Beekes pre-Greek substrate test: 10 prediction entries, three-way phonological convergence (substrate × Linear A × Hurrian), semantic domain overlap analysis, triangulation methodology |
 | `LINEAR_A_CONTROL_VALIDATION.py` | Linear B negative control, expanded 38-item vocabulary, 5 visualizations, source documentation, honest assessment |
 | `LINEAR_A_STRUCTURAL_ANALYSIS.py` | Core analysis: libation formula corpus, morphological rule testing, information theory, sign frequency, co-occurrence networks |
@@ -87,6 +88,8 @@ The approach treats Linear A as a systems analysis problem rather than a purely 
 4. **Cross-domain convergence** — Independent evidence streams (DNA, trade networks, material culture) evaluated via Bayesian updating
 5. **Negative control validation** — Linear B (deciphered Mycenaean Greek) run through the same pipeline to verify methodology doesn't produce false positives
 6. **Substrate prediction testing** — Beekes' ~800 pre-Greek substrate words (independently reconstructed from Greek-internal evidence) used as an external prediction corpus for proposed Linear A readings — three-way convergence with Hurrian phonology
+7. **Cross-cultural structural analysis** — 3,000+ ancient texts from 6 civilizations (Sumerian, Egyptian, Hittite, Hebrew, Greek, Vedic) analyzed for universal ritual formula invariants. Zero-exception rule identified: every libation formula across 2,500 years contains agent + deity + action. Applied to constrain Linear A libation formula structure.
+8. **Corpus-wide computational analysis** — All 1,720 inscriptions processed through statistical pattern matching: commodity co-occurrence, word frequency, document type classification, arithmetic verification of totals
 
 ### Calibration & Limitations
 
